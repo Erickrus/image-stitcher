@@ -20,7 +20,7 @@ class ImageStitcher:
         minDiff, minPos = 999999, 10000
         for i in range(px2.shape[1]):
             px2Line = px2[:,i]
-            # L1 difference
+            # MSE as difference
             diff = np.sqrt(np.sum((px2Line - px1Line)**2))
             #print(i, diff)
             if diff < minDiff:
